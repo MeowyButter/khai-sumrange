@@ -30,6 +30,7 @@ h1 {
 p {
 	color: #D3D3D3;
 	font-family: "disc";
+	width: 85%;
 }
 .calc {
 	cursor: pointer;
@@ -53,7 +54,7 @@ p {
 	color: #00dfc4;
 }
 .info {
-	width: 750px;
+	width: 85%;
 }
 .info p {
 	width: 100%;
