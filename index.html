@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<link rel="stylesheet" href="sumrange.css">
+		<title> Espinosa </title>
+		<link href="https://fonts.cdnfonts.com/css/eagle-4" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h2 style="font-size:100px"> &#127822; </h2>
+		<h1> Sum of All Numbers in Range </h1>
+		<p> Input two numbers, a starting number, and an ending number, and it'll automatically calculate the sum of all numbers inside that range.</p>
+		<br/> <br/>
+		
+		<div class="inputBox">
+			<input type="number" required="required" id="a"> 
+			<span> Initial Number <span>
+		</div>
+		<br/>
+		<div class="inputBox">
+			<input type="number" required="required" id="b"> 
+			<span> Ending  Number <span>
+		</div>
+		<br/>
+		<button onclick="sumAll()" class="calc"> Calculate </button>
+		<br/>
+		<p id="ans"></p> 
+		
+		<script type="text/javascript">
+			function sumAll() {
+				var start = Number(document.getElementById("a").value);
+				var end = Number(document.getElementById("b").value);
+				var ans = document.getElementById('ans');
+				var anss = document.getElementById('anss');
+				var sum = 0;
+				
+			
+				 if (start > end){
+					ans.textContent = "The starting number must be smaller than the ending number." + "\n";
+					ans.textContent += "Try Again.";
+				} 
+				else if (start == 0 && end == 0) {
+					ans.textContent = "sumala.";
+				}
+				
+				else if (start == end) {
+					ans.textContent = start + " oi. Samok";
+				}
+				else if (start < end) {	
+					for (var i = start; i <= end; i++) {
+						sum += i;
+					}
+					
+					ans.textContent = "The sum of all numbers ranging from " 	+start + " to " + end + " is " + sum + ".";
+				}
+				
+				
+				else {
+					ans.textContent = "Ambot nimo";
+				}
+			}
+			
+		</script>
+		
+		
+	</body>
+	
+</html>
